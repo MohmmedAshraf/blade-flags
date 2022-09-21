@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "circle-flags": "github:HatScripts/circle-flags"
+  }
+}
