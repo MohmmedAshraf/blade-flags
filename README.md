@@ -77,19 +77,7 @@ Icons can be used as self-closing Blade components which will be compiled to SVG
 You can also pass classes to your icon components:
 
 ```blade
-<x-flag-country-us class="w-6 h-6 text-gray-500"/>
-```
-
-And even use inline styles:
-
-```blade
-<x-flag-country-us style="color: #555"/>
-```
-
-Or use the `@svg` directive:
-
-```blade
-@svg('flag-country-us', 'w-6 h-6', ['style' => 'color: #555'])
+<x-flag-country-us class="w-6 h-6"/>
 ```
 
 ### Raw SVG Icons
@@ -103,11 +91,11 @@ php artisan vendor:publish --tag=blade-flags --force
 Then use them in your views like:
 
 ```blade
-<img src="{{ asset('vendor/blade-flags/country-us.svg') }}" width="10" height="10"/>
+<img src="{{ asset('vendor/blade-flags/country-us.svg') }}" width="32" height="32"/>
 ```
 
 ```blade
-<img src="{{ asset('vendor/blade-flags/language-en.svg') }}" width="10" height="10"/>
+<img src="{{ asset('vendor/blade-flags/language-en.svg') }}" width="32" height="32"/>
 ```
 
 ## Changelog
