@@ -17,9 +17,9 @@
     <img src="https://img.shields.io/packagist/dt/outhebox/blade-flags" alt="Total Downloads">
 </a>
 
-A package to easily make use of [Countries & Languages Flags](https://github.com/HatScripts/circle-flags) in your Laravel Blade views.
+A package to easily make use of [TwEmoji Countries & Languages Flags](https://github.com/twitter/twemoji) in your Laravel Blade views.
 
-For a full list of available icons see [the SVG directory](resources/svg) or preview all the available flags, check [the gallery](https://hatscripts.github.io/circle-flags/gallery).
+For a full list of available icons see [the SVG directory](resources/svg) or preview all the available flags, check [the gallery](https://github.com/twitter/twemoji).
 
 ## Requirements
 
@@ -91,8 +91,6 @@ Or use the `@svg` directive:
 ```blade
 @svg('flag-country-us', 'w-6 h-6', ['style' => 'color: #555'])
 ```
-
-To view all the available flags, check [the gallery](https://hatscripts.github.io/circle-flags/gallery).
 
 ### Raw SVG Icons
 
