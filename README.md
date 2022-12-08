@@ -80,6 +80,23 @@ You can also pass classes to your icon components:
 <x-flag-country-us class="w-6 h-6"/>
 ```
 
+### Dynamic Examples
+
+You can also use dynamic values to render icons:
+
+- For country flags:
+
+```blade
+<x-dynamic-component :component="flag-country-{{ $country->iso2_code }}" />
+```
+
+- For language flags:
+
+```blade
+<x-dynamic-component :component="flag-language-{{ $langauge->code }}" />
+```
+
+
 ### Raw SVG Icons
 
 If you want to use the raw SVG icons as assets, you can publish them using:
