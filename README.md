@@ -36,6 +36,8 @@ composer require outhebox/blade-flags
 
 Blade Flags uses Blade Icons under the hood. Please refer to [the Blade Icons readme](https://github.com/blade-ui-kit/blade-icons) for additional functionality. We also recommend to [enable icon caching](https://github.com/blade-ui-kit/blade-icons#caching) with this library.
 
+> 📺 **[Watch a 3-minute video by Povilas Korop](https://www.youtube.com/watch?v=XTnKU-VCOB8)** showcasing the package.
+
 ## Configuration
 
 Blade Flags also offers the ability to use features from Blade Icons like default classes, default attributes, etc. If you'd like to configure these, publish the `blade-flags.php` config file:
