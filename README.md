@@ -38,6 +38,13 @@ Blade Flags uses Blade Icons under the hood. Please refer to [the Blade Icons re
 
 > 📺 **[Watch a 3-minute video by Povilas Korop](https://www.youtube.com/watch?v=XTnKU-VCOB8)** showcasing the package.
 
+## Flutter version
+If you are looking for a Flutter version of this package, check [dash_flags](https://github.com/moazelsawaf/dash_flags), a Flutter package that provides a set of flags for all countries and languages. by [Moaz El-sawaf](https://github.com/moazelsawaf).
+
+<a href="https://github.com/moazelsawaf/dash_flags">
+    <img src="https://raw.githubusercontent.com/moazelsawaf/dash_flags/main/doc/assets/package_banner.png" width="1280" alt="Latest Stable Version">
+</a>
+
 ## Configuration
 
 Blade Flags also offers the ability to use features from Blade Icons like default classes, default attributes, etc. If you'd like to configure these, publish the `blade-flags.php` config file:
