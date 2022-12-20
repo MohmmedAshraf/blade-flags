@@ -36,6 +36,11 @@ composer require outhebox/blade-flags
 
 Blade Flags uses Blade Icons under the hood. Please refer to [the Blade Icons readme](https://github.com/blade-ui-kit/blade-icons) for additional functionality. We also recommend to [enable icon caching](https://github.com/blade-ui-kit/blade-icons#caching) with this library.
 
+## :film_strip: here are video tutorial
+#### How to install and how to implement the package.
+
+ [<img src="https://img.youtube.com/vi/eelHE7Rpuh4/0.jpg" width="250">](https://youtu.be/eelHE7Rpuh4)
+
 > 📺 **[Watch a 3-minute video by Povilas Korop](https://www.youtube.com/watch?v=XTnKU-VCOB8)** showcasing the package.
 
 ## Flutter version
