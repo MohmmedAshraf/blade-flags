@@ -1,3 +1,7 @@
+## 1.1.2 - 2023-01-10
+
+Add support for Laravel 8
+
 ## v1.1.1 - 2022-12-23
 
 Add missing flags #8 , #9
