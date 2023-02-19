@@ -1,3 +1,7 @@
+## v1.2.0 - 2023-02-19
+
+Add support for Laravel 10
+
 ## 1.1.2 - 2023-01-10
 
 Add support for Laravel 8
