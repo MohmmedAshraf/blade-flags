@@ -101,13 +101,13 @@ You can also use dynamic values to render icons:
 - For country flags:
 
 ```blade
-<x-dynamic-component component="flag-country-{{ $country->iso2_code }}" />
+<x-icon name="flag-country-{{ $country->iso2_code }}" />
 ```
 
 - For language flags:
 
 ```blade
-<x-dynamic-component component="flag-language-{{ $langauge->code }}" />
+<x-icon name="flag-language-{{ $langauge->code }}" />
 ```
 
 
