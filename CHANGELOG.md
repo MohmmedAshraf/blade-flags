@@ -1,3 +1,7 @@
+## v1.2.1 - 2023-12-21
+
+Fix fallback icon not working!
+
 ## v1.2.0 - 2023-02-19
 
 Add support for Laravel 10
