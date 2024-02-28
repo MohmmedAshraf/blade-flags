@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace Tests;
 
+use PHPUnit\Framework\Attributes\Test;
 use BladeUI\Icons\BladeIconsServiceProvider;
 use Orchestra\Testbench\TestCase;
 use OutheBox\BladeFlags\BladeFlagsServiceProvider;
 
 class CompilesIconsTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function it_compiles_a_single_anonymous_component()
     {
         $result = svg('flag-country-us')->toHtml();
@@ -23,7 +24,7 @@ class CompilesIconsTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_add_classes_to_icons()
     {
         $result = svg('flag-country-us', 'w-6 h-6 text-gray-500')->toHtml();
@@ -35,7 +36,7 @@ class CompilesIconsTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
-    /** @test */
+    #[Test]
     public function it_can_add_styles_to_icons()
     {
         $result = svg('flag-country-us', ['style' => 'color: #555'])->toHtml();
