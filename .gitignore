@@ -1,6 +1,6 @@
 node_modules/
 vendor/
-.phpunit.result.cache
+/.phpunit.cache
 composer.lock
 phpunit.xml
 package-lock.json
