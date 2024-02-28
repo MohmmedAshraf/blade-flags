@@ -12,7 +12,7 @@ use OutheBox\BladeFlags\BladeFlagsServiceProvider;
 class CompilesIconsTest extends TestCase
 {
     #[Test]
-    public function it_compiles_a_single_anonymous_component()
+    public function it_compiles_a_single_anonymous_component(): void
     {
         $result = svg('flag-country-us')->toHtml();
 
@@ -25,7 +25,7 @@ class CompilesIconsTest extends TestCase
     }
 
     #[Test]
-    public function it_can_add_classes_to_icons()
+    public function it_can_add_classes_to_icons(): void
     {
         $result = svg('flag-country-us', 'w-6 h-6 text-gray-500')->toHtml();
 
@@ -37,7 +37,7 @@ class CompilesIconsTest extends TestCase
     }
 
     #[Test]
-    public function it_can_add_styles_to_icons()
+    public function it_can_add_styles_to_icons(): void
     {
         $result = svg('flag-country-us', ['style' => 'color: #555'])->toHtml();
 
