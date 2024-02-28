@@ -9,7 +9,7 @@ use BladeUI\Icons\BladeIconsServiceProvider;
 use Orchestra\Testbench\TestCase;
 use OutheBox\BladeFlags\BladeFlagsServiceProvider;
 
-class CompilesIconsTest extends TestCase
+final class CompilesIconsTest extends TestCase
 {
     #[Test]
     public function it_compiles_a_single_anonymous_component(): void
