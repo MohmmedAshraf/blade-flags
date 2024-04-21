@@ -107,7 +107,7 @@ You can also use dynamic values to render icons:
 - For language flags:
 
 ```blade
-<x-icon name="flag-language-{{ $langauge->code }}" />
+<x-icon name="flag-language-{{ $language->code }}" />
 ```
 
 
