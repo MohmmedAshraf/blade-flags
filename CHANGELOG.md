@@ -1,3 +1,17 @@
+## 1.5.1 - 2024-04-23
+
+### What's Changed
+
+* Fix a typo in the README file. by @hackedhorizon in https://github.com/MohmmedAshraf/blade-flags/pull/19
+* Flag catalan language-ca by @adriallongarriu in https://github.com/MohmmedAshraf/blade-flags/pull/18
+
+### New Contributors
+
+* @hackedhorizon made their first contribution in https://github.com/MohmmedAshraf/blade-flags/pull/19
+* @adriallongarriu made their first contribution in https://github.com/MohmmedAshraf/blade-flags/pull/18
+
+**Full Changelog**: https://github.com/MohmmedAshraf/blade-flags/compare/1.5.0...1.5.1
+
 ## v1.5.0 - 2024-02-28
 
 ### What's Changed
