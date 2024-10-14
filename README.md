@@ -21,6 +21,16 @@ A package to easily make use of [TwEmoji Countries & Languages Flags](https://gi
 
 For a full list of available icons see [the SVG directory](resources/svg) or preview all the available flags, check [the gallery](https://github.com/twitter/twemoji).
 
+## Support
+
+[<img src="https://outhebox-github-ads.s3.us-east-1.amazonaws.com/blade-flags.jpg)?t=1" width="419px" />](https://outhebox.dev/github-ad-click/blade-flags).
+
+Thank you for considering supporting the development of this package! If you'd like to contribute, you can buy me a coffee or sponsor me to help keep me motivated to continue improving this package. You can also support the project by starring ⭐ the repository.
+
+To buy me a coffee, click the button below:
+
+<a href="https://www.buymeacoffee.com/outhebox" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+
 ## Requirements
 
 - PHP 8.0 or higher
