@@ -23,7 +23,7 @@ For a full list of available icons see [the SVG directory](resources/svg) or pre
 
 ## Support
 
-[<img src="https://outhebox-github-ads.s3.us-east-1.amazonaws.com/blade-flags.jpg)?t=1" width="419px" />](https://outhebox.dev/github-ad-click/blade-flags).
+[<img src="https://outhebox-github-ads.s3.us-east-1.amazonaws.com/blade-flags.jpg?t=1" width="419px" />](https://outhebox.dev/github-ad-click/blade-flags).
 
 Thank you for considering supporting the development of this package! If you'd like to contribute, you can buy me a coffee or sponsor me to help keep me motivated to continue improving this package. You can also support the project by starring ⭐ the repository.
 
