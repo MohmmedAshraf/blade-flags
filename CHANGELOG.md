@@ -1,3 +1,15 @@
+## v1.5.2 - 2024-12-26
+
+### What's Changed
+
+* Updated Syrian Flag to the New Free Syria Green Flag by @JamelSyr in https://github.com/MohmmedAshraf/blade-flags/pull/23
+
+### New Contributors
+
+* @JamelSyr made their first contribution in https://github.com/MohmmedAshraf/blade-flags/pull/23
+
+**Full Changelog**: https://github.com/MohmmedAshraf/blade-flags/compare/1.5.1...1.5.2
+
 ## 1.5.1 - 2024-04-23
 
 ### What's Changed
