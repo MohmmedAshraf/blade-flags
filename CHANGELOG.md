@@ -1,3 +1,11 @@
+## v1.5.3 - 2025-02-24
+
+### What's Changed
+
+* Laravel 12.x Compatibility by @laravel-shift in https://github.com/MohmmedAshraf/blade-flags/pull/24
+
+**Full Changelog**: https://github.com/MohmmedAshraf/blade-flags/compare/1.5.2...1.5.3
+
 ## v1.5.2 - 2024-12-26
 
 ### What's Changed
