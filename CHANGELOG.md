@@ -1,3 +1,15 @@
+## v1.5.4 - 2025-08-30
+
+### What's Changed
+
+* Add home nation country flags by @michaeljmeadows in https://github.com/MohmmedAshraf/blade-flags/pull/26
+
+### New Contributors
+
+* @michaeljmeadows made their first contribution in https://github.com/MohmmedAshraf/blade-flags/pull/26
+
+**Full Changelog**: https://github.com/MohmmedAshraf/blade-flags/compare/1.5.3...1.5.4
+
 ## v1.5.3 - 2025-02-24
 
 ### What's Changed
