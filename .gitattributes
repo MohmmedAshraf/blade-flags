@@ -4,6 +4,7 @@
 /bin export-ignore
 /config/generation.php export-ignore
 /dist export-ignore
+/packages/*/dist/ export-ignore
 /tests export-ignore
 .gitattributes export-ignore
 .gitignore export-ignore

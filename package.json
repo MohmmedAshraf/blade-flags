@@ -1,6 +1,26 @@
 {
+  "private": true,
+  "scripts": {
+    "generate": "tsx scripts/generate-js.ts",
+    "build": "pnpm -r build",
+    "build:core": "pnpm --filter @blade-flags/core build",
+    "build:vue": "pnpm --filter @blade-flags/vue build",
+    "build:react": "pnpm --filter @blade-flags/react build",
+    "format": "prettier --write \"scripts/**/*.ts\" \"packages/*/src/**/*.{ts,tsx}\" \"packages/*/tsup.config.ts\"",
+    "release": "pnpm generate && pnpm build && pnpm -r publish --no-git-checks"
+  },
   "dependencies": {
     "circle-flags": "github:HatScripts/circle-flags",
     "flag-icons": "^7.0.0"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
   }
 }

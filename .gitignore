@@ -4,5 +4,7 @@ vendor/
 composer.lock
 phpunit.xml
 package-lock.json
+pnpm-lock.yaml
 .DS_Store
 .idea
+packages/*/dist/
