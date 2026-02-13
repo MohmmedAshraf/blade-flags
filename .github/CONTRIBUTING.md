@@ -13,7 +13,7 @@ Thank you for considering contributing to Blade Flags! This guide will help you 
 2. Install dependencies:
    ```bash
    composer install
-   npm install
+   pnpm install
    ```
 
 3. Build the SVG flag assets:
@@ -21,6 +21,12 @@ Thank you for considering contributing to Blade Flags! This guide will help you 
    bash bin/build.sh
    ```
    This requires [jq](https://jqlang.github.io/jq/) to be installed.
+
+4. Generate and build the JS packages:
+   ```bash
+   pnpm generate
+   pnpm build
+   ```
 
 ## Workflow
 
@@ -49,12 +55,22 @@ To regenerate all flags after changing the config:
 bash bin/build.sh
 ```
 
+### JavaScript Packages
+
+The JS packages live in `packages/` and are managed as a pnpm workspace. After changing SVGs, regenerate the JS flag modules and rebuild:
+
+```bash
+pnpm generate   # reads resources/svg* → packages/core/src/flags/*.ts
+pnpm build      # builds all three packages (core, vue, react)
+```
+
 ### Adding or Updating Language Mappings
 
 1. Edit `config/language-countries.json` with the new mapping
 2. Run `bash bin/build.sh` to regenerate the SVGs
-3. Run `composer test` to verify everything works
-4. Commit both the JSON config and the generated SVGs
+3. Run `pnpm generate && pnpm build` to regenerate the JS flag modules
+4. Run `composer test` to verify everything works
+5. Commit both the JSON config and the generated SVGs
 
 ## Pull Requests
 
@@ -62,6 +78,7 @@ bash bin/build.sh
 - Keep changes focused — one feature or fix per PR
 - Include tests for new functionality
 - Run `composer format` and `composer test` before submitting
+- Run `pnpm generate && pnpm build` if SVGs changed
 - Describe your changes clearly in the PR description
 
 ## Reporting Issues
