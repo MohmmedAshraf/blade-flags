@@ -20,15 +20,15 @@
 
 ## Introduction
 
-A package to easily make use of country & language flags in your Laravel Blade views. Ships with three flag styles out of the box:
+Blade Flags provides country and language flags as first-class Blade components for Laravel. Use them anywhere you'd use an icon — locale switchers, address forms, dashboards, or admin panels. No frontend build step required.
+
+The package ships with three flag styles, 128 language mappings, and full support for regional variants like `ar-sa`, `en-us`, and `fr-ca`:
 
 | Variant           | Component                      | Countries | Languages | Source                                                     |
 |-------------------|--------------------------------|:---------:|:---------:|------------------------------------------------------------|
 | Default (rounded) | `<x-flag-country-us />`        |    264    |    281    | [TwEmoji](https://github.com/twitter/twemoji)              |
 | Circle            | `<x-flag-circle-country-us />` |    405    |    275    | [circle-flags](https://github.com/HatScripts/circle-flags) |
 | Flat (4:3)        | `<x-flag-flat-country-us />`   |    270    |    264    | [flag-icons](https://github.com/lipis/flag-icons)          |
-
-Language flags are generated from country flags using a [config-driven mapping](config/language-countries.json) covering 128 languages. All variants include regional language variants (e.g. `ar-sa`, `en-us`, `fr-ca`) where applicable.
 
 For a full list of available icons see the SVG directories: [default](resources/svg), [circle](resources/svg-circle), [flat](resources/svg-flat).
 
