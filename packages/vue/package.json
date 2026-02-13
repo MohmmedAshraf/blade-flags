@@ -1,0 +1,33 @@
+{
+  "name": "@blade-flags/vue",
+  "version": "0.1.0",
+  "description": "Vue 3 flag components powered by @blade-flags/core",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "peerDependencies": {
+    "@blade-flags/core": ">=0.1.0",
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@blade-flags/core": "workspace:*",
+    "tsup": "^8.2.0",
+    "vue": "^3.5.0"
+  }
+}

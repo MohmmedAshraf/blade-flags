@@ -1,0 +1,48 @@
+{
+  "name": "@blade-flags/core",
+  "version": "0.1.0",
+  "description": "SVG country and language flags as JS modules",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./flags/default": {
+      "types": "./dist/flags/default.d.ts",
+      "import": "./dist/flags/default.js",
+      "require": "./dist/flags/default.cjs"
+    },
+    "./flags/circle": {
+      "types": "./dist/flags/circle.d.ts",
+      "import": "./dist/flags/circle.js",
+      "require": "./dist/flags/circle.cjs"
+    },
+    "./flags/flat": {
+      "types": "./dist/flags/flat.d.ts",
+      "import": "./dist/flags/flat.js",
+      "require": "./dist/flags/flat.cjs"
+    },
+    "./flags": {
+      "types": "./dist/flags/index.d.ts",
+      "import": "./dist/flags/index.js",
+      "require": "./dist/flags/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "tsup": "^8.2.0"
+  }
+}
