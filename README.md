@@ -8,8 +8,7 @@
     <a href="#configuration">Configuration</a> |
     <a href="#language-flag-overrides">Language Overrides</a> |
     <a href="#raw-svg-icons">Raw SVGs</a> |
-    <a href="#contributing">Contributing</a> |
-    <a href="#changelog">Changelog</a>
+    <a href="#contributing">Contributing</a>
 </p>
 
 <p align="center">
@@ -227,10 +226,6 @@ Then use them in your views like:
 ## Contributing
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
-
-## Changelog
-
-Check out the [CHANGELOG](CHANGELOG.md) in this repository for all the recent changes.
 
 ## License
 
