@@ -47,6 +47,67 @@ class CompilesIconsTest extends TestCase
         $this->assertSame($expected, $result);
     }
 
+    /** @test */
+    public function it_compiles_a_circle_variant_icon()
+    {
+        $result = svg('flag-circle-country-us')->toHtml();
+
+        $this->assertStringContainsString('<svg', $result);
+        $this->assertStringContainsString('mask', $result);
+        $this->assertStringContainsString('circle', $result);
+    }
+
+    /** @test */
+    public function it_compiles_a_flat_variant_icon()
+    {
+        $result = svg('flag-flat-country-us')->toHtml();
+
+        $this->assertStringContainsString('<svg', $result);
+        $this->assertStringContainsString('flag-icons-us', $result);
+    }
+
+    /** @test */
+    public function it_can_add_classes_to_circle_variant_icons()
+    {
+        $result = svg('flag-circle-country-us', 'w-6 h-6')->toHtml();
+
+        $this->assertStringContainsString('class="w-6 h-6"', $result);
+        $this->assertStringContainsString('<svg', $result);
+    }
+
+    /** @test */
+    public function it_can_add_classes_to_flat_variant_icons()
+    {
+        $result = svg('flag-flat-country-us', 'w-6 h-6')->toHtml();
+
+        $this->assertStringContainsString('class="w-6 h-6"', $result);
+        $this->assertStringContainsString('<svg', $result);
+    }
+
+    /** @test */
+    public function it_compiles_a_language_flag()
+    {
+        $result = svg('flag-language-en')->toHtml();
+
+        $this->assertStringContainsString('<svg', $result);
+    }
+
+    /** @test */
+    public function it_compiles_a_circle_language_flag()
+    {
+        $result = svg('flag-circle-language-en')->toHtml();
+
+        $this->assertStringContainsString('<svg', $result);
+    }
+
+    /** @test */
+    public function it_compiles_a_flat_language_flag()
+    {
+        $result = svg('flag-flat-language-en')->toHtml();
+
+        $this->assertStringContainsString('<svg', $result);
+    }
+
     protected function getPackageProviders($app)
     {
         return [

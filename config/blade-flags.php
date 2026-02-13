@@ -54,4 +54,26 @@ return [
         // 'height' => 50,
     ],
 
+    /*
+    |-----------------------------------------------------------------
+    | Language Flag Overrides
+    |-----------------------------------------------------------------
+    |
+    | Override which country flag is used for a language flag.
+    | Each entry maps a language code to a country code.
+    | Run `php artisan blade-flags:generate` after changing these.
+    |
+    | Example: use Saudi Arabia for Arabic and US for English:
+    |   'language_overrides' => [
+    |       'ar' => ['default' => 'sa'],
+    |       'en' => ['default' => 'us'],
+    |   ],
+    |
+    */
+
+    'language_overrides' => [
+        // 'ar' => ['default' => 'sa'],
+        // 'en' => ['default' => 'us'],
+    ],
+
 ];
