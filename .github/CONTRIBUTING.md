@@ -32,9 +32,10 @@ composer test
 
 ### Code Formatting
 
-This project uses [Laravel Pint](https://laravel.com/docs/pint) for code style. Run the formatter before committing:
+This project uses [Laravel Pint](https://laravel.com/docs/pint) for code style (requires PHP 8.2+). Install it once, then run before committing:
 
 ```bash
+composer require laravel/pint --dev
 composer format
 ```
 
