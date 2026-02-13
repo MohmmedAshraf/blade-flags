@@ -1,39 +1,16 @@
-name: Tests
+name: Release JS Packages
 
 on:
-  push:
-    branches: [main]
-  pull_request:
+  release:
+    types: [published]
 
 jobs:
-  test:
+  publish:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        php: ['8.0', '8.1', '8.2', '8.3', '8.4']
-
-    name: PHP ${{ matrix.php }}
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: ${{ matrix.php }}
-          coverage: none
-
-      - name: Install dependencies
-        run: composer update --prefer-dist --no-interaction --no-progress
-
-      - name: Run tests
-        run: composer test
-
-  js-build:
-    runs-on: ubuntu-latest
-    name: JS Build
+    if: startsWith(github.event.release.tag_name, 'js-v')
+    permissions:
+      contents: read
+      id-token: write
 
     steps:
       - name: Checkout code
@@ -43,6 +20,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: https://registry.npmjs.org
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
@@ -51,6 +29,14 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install
+
+      - name: Extract version from tag
+        id: version
+        run: echo "VERSION=${GITHUB_REF_NAME#js-v}" >> "$GITHUB_OUTPUT"
+
+      - name: Set package versions
+        run: |
+          pnpm -r exec npm version "${{ steps.version.outputs.VERSION }}" --no-git-tag-version --allow-same-version
 
       - name: Generate flag modules
         run: pnpm generate
@@ -63,3 +49,8 @@ jobs:
           node -e "const c = require('./packages/core/dist/flags/default.cjs'); const n = Object.keys(c.defaultFlags).length; console.log('default:', n); if (n < 500) process.exit(1)"
           node -e "const c = require('./packages/core/dist/flags/circle.cjs'); const n = Object.keys(c.circleFlags).length; console.log('circle:', n); if (n < 500) process.exit(1)"
           node -e "const c = require('./packages/core/dist/flags/flat.cjs'); const n = Object.keys(c.flatFlags).length; console.log('flat:', n); if (n < 500) process.exit(1)"
+
+      - name: Publish to npm
+        run: pnpm -r publish --no-git-checks
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
