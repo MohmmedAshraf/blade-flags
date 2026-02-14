@@ -14,7 +14,7 @@ FLAT_DEST="$ROOT_DIR/resources/svg-flat"
 CONFIG_FILE="$ROOT_DIR/config/language-countries.json"
 
 # Flags to exclude (basename without extension)
-EXCLUDED="il"
+EXCLUDED=""
 
 is_excluded() {
     local name="$1"

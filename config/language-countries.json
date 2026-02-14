@@ -35,6 +35,7 @@
   "gn": { "default": "py" },
   "gu": { "default": "in" },
   "ha": { "default": "ng", "countries": ["ng", "ne"] },
+  "he": { "default": "il" },
   "hi": { "default": "in" },
   "ho": { "default": "pg" },
   "hr": { "default": "hr" },

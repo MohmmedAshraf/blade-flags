@@ -332,6 +332,10 @@ import { AutoFlag } from '@blade-flags/vue'
 </template>
 ```
 
+## Disclaimer
+
+This package aims for broad compatibility by mirroring upstream flag collections. Inclusion of any flag does not imply endorsement. The author of this package stands with Palestine (the Palestine flag is featured in the project cover). If you want to exclude specific flags, you can do so in your application/UI, or exclude them during the build via [`bin/build.sh`](bin/build.sh).
+
 ## Contributing
 
 Please see [CONTRIBUTING](.github/CONTRIBUTING.md) for details.
