@@ -12,7 +12,14 @@ export const Flag = forwardRef<HTMLSpanElement, FlagProps>(
     ({ code, type = 'country', flags, ...rest }, ref) => {
         const svg = resolveFlag(flags, code, type)
         if (!svg) return null
-        return <span ref={ref} {...rest} dangerouslySetInnerHTML={{ __html: svg }} />
+        return (
+            <span
+                ref={ref}
+                style={{ display: 'inline-flex' }}
+                {...rest}
+                dangerouslySetInnerHTML={{ __html: svg }}
+            />
+        )
     },
 )
 

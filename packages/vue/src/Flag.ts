@@ -13,7 +13,7 @@ export const Flag = defineComponent({
         return () => {
             const svg = resolveFlag(props.flags, props.code, props.type)
             if (!svg) return null
-            return h('span', { innerHTML: svg })
+            return h('span', { innerHTML: svg, style: 'display:inline-flex' })
         }
     },
 })

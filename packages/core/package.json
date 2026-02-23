@@ -1,6 +1,6 @@
 {
   "name": "@blade-flags/core",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "SVG country and language flags as JS modules",
   "license": "MIT",
   "type": "module",
