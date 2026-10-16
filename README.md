@@ -244,6 +244,20 @@ import { circleFlags } from '@blade-flags/core/flags/circle'
 </template>
 ```
 
+When the flags are known at build time, pass the SVG directly and only those flags ship:
+
+```vue
+<script setup>
+import { Flag } from '@blade-flags/vue/flag'
+import { countryAe, countryUs } from '@blade-flags/core/flags/circle'
+</script>
+
+<template>
+  <Flag :svg="countryAe" />
+  <Flag :svg="countryUs" />
+</template>
+```
+
 ## React
 
 Works with React 18+.
@@ -255,6 +269,16 @@ import { circleFlags } from '@blade-flags/core/flags/circle'
 // Dynamic: pass the full map, resolve by code at runtime
 <Flag code={user.country} flags={circleFlags} />
 <Flag code="ar-sa" type="language" flags={circleFlags} />
+```
+
+When the flags are known at build time, pass the SVG directly and only those flags ship:
+
+```tsx
+import { Flag } from '@blade-flags/react/flag'
+import { countryAe, countryUs } from '@blade-flags/core/flags/circle'
+
+<Flag svg={countryAe} />
+<Flag svg={countryUs} />
 ```
 
 ## Vanilla JS
@@ -319,6 +343,16 @@ import { flatFlags } from '@blade-flags/core/flags/flat'        // 270 country +
 | `@blade-flags/core` | SVG strings as JS modules + `resolveFlag()` helper |
 | `@blade-flags/vue` | `<Flag>` component for Vue 3 (peer dep: `vue ^3.3`) |
 | `@blade-flags/react` | `<Flag>` component for React 18+ (peer dep: `react ^18 \| ^19`) |
+
+### Entry points
+
+Both component packages are side-effect free and expose three entry points:
+
+| Import | Contains | Bundle impact |
+|---|---|---|
+| `@blade-flags/react` / `@blade-flags/vue` | `Flag` and `AutoFlag` | Only what you import; `AutoFlag` pulls all three variants when used |
+| `@blade-flags/react/flag` / `@blade-flags/vue/flag` | `Flag` only | Never loads a flag map |
+| `@blade-flags/react/auto` / `@blade-flags/vue/auto` | `AutoFlag` only | All three variants |
 
 The `AutoFlag` convenience component accepts a `variant` string prop but bundles all variants:
 
