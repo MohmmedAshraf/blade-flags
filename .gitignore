@@ -8,3 +8,6 @@ pnpm-lock.yaml
 .DS_Store
 .idea
 packages/*/dist/
+packages/core/src/flags/default/
+packages/core/src/flags/circle/
+packages/core/src/flags/flat/

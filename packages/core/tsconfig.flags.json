@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "outDir": "dist/flags",
+    "rootDir": "src/flags",
+    "declaration": false,
+    "declarationMap": false,
+    "sourceMap": false,
+    "module": "ESNext"
+  },
+  "include": [
+    "src/flags/default",
+    "src/flags/circle",
+    "src/flags/flat"
+  ]
+}

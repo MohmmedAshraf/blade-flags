@@ -312,7 +312,16 @@ Flag names follow the pattern `country{Code}` and `language{Code}` in camelCase:
 | `language-ar` | `languageAr` | Language |
 | `language-ar-sa` | `languageArSa` | Language (regional) |
 
-For **dynamic** use (code comes from a database or API), import the full variant map. The `Flag` component uses this approach:
+Every flag is also its own module, so a code that comes from data can be loaded on demand without shipping the whole variant:
+
+```js
+// One flag, one chunk: bundlers turn this into a lazy chunk per flag
+const { svg } = await import(`@blade-flags/core/flags/circle/country-${code}`)
+```
+
+Module paths follow the SVG key: `@blade-flags/core/flags/{variant}/{type}-{code}`, for example `flags/circle/country-ae`, `flags/flat/language-ar-sa`. Each exports a single `svg` string (ESM only).
+
+For **dynamic** use where you prefer one import, load the full variant map. The `Flag` component uses this approach:
 
 ```js
 // Loads all flags in the variant — use when the code isn't known at build time
