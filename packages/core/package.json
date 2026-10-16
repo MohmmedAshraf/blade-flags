@@ -3,6 +3,11 @@
   "version": "0.2.0",
   "description": "SVG country and language flags as JS modules",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MohmmedAshraf/blade-flags.git",
+    "directory": "packages/core"
+  },
   "type": "module",
   "sideEffects": false,
   "exports": {
