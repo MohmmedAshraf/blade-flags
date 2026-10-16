@@ -1,6 +1,6 @@
 {
   "name": "@blade-flags/core",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "SVG country and language flags as JS modules",
   "license": "MIT",
   "repository": {
@@ -35,6 +35,10 @@
       "types": "./dist/flags/index.d.ts",
       "import": "./dist/flags/index.js",
       "require": "./dist/flags/index.cjs"
+    },
+    "./flags/*": {
+      "types": "./dist/flags/*.d.ts",
+      "import": "./dist/flags/*.js"
     }
   },
   "main": "./dist/index.cjs",
@@ -48,7 +52,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup"
+    "build": "tsup && tsc -p tsconfig.flags.json && tsx ../../scripts/flag-types.ts"
   },
   "devDependencies": {
     "tsup": "^8.2.0"

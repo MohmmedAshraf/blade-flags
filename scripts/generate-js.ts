@@ -1,4 +1,4 @@
-import { readdirSync, readFileSync, writeFileSync, mkdirSync } from 'fs'
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, rmSync } from 'fs'
 import { join, basename, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -77,6 +77,13 @@ function generateVariant(variant: (typeof variants)[number]): { count: number } 
     lines.push('')
 
     writeFileSync(join(OUT_DIR, `${variant.name}.ts`), lines.join('\n'))
+
+    const moduleDir = join(OUT_DIR, variant.name)
+    rmSync(moduleDir, { recursive: true, force: true })
+    mkdirSync(moduleDir, { recursive: true })
+    for (const { key, svg } of entries) {
+        writeFileSync(join(moduleDir, `${key}.ts`), `export const svg = \`${escapeSvg(svg)}\`\n`)
+    }
     return { count: entries.length }
 }
 
